@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "099fbc2c-527a-4649-a270-8386a16c8837",
+		"name": "Gerenciamento de Clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27870789"
+	},
+	"item": [
+		{
+			"name": "createCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"nome\": \"Marcos Antonio da Silva\",\n        \"estado\": \"SP\",\n        \"representante\": \"Fernanda Costa\"\n    },\n    {\n        \"nome\": \"Ana Pereira\",\n        \"estado\": \"RJ\",\n        \"representante\": \"Juliana Lima\"\n    },\n    {\n        \"nome\": \"Marcos Vinicius da Silva\",\n        \"estado\": \"SP\",\n        \"representante\": \"Fernanda Costa\"\n    },\n    {\n        \"nome\": \"Ana Luiza Souza\",\n        \"estado\": \"RJ\",\n        \"representante\": \"Juliana Lima\"\n    },\n    {\n        \"nome\": \"Marcos Aurelio\",\n        \"estado\": \"SP\",\n        \"representante\": \"Juliana Lima\"\n    }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllClientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClienteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/6b12b349-4d8a-41df-a1c1-c7ab87e37b51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"6b12b349-4d8a-41df-a1c1-c7ab87e37b51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": \"f67b72f5-fa1a-43ef-b04f-7c0bce38f619\",\n        \"nome\": \"João da Costa\",\n        \"estado\": \"SP\",\n        \"representante\": \"Fernanda Costa\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/6b12b349-4d8a-41df-a1c1-c7ab87e37b51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"6b12b349-4d8a-41df-a1c1-c7ab87e37b51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/6ac96181-5595-4be9-9a8e-30de529828ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"6ac96181-5595-4be9-9a8e-30de529828ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClientesByEstado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/estado/RJ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"estado",
+						"RJ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClientesByRepresentante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/representante/Juliana Lima",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"representante",
+						"Juliana Lima"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClientesByNome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/nome/Pereira",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"nome",
+						"Pereira"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
